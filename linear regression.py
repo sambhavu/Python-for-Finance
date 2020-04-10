@@ -28,4 +28,25 @@ def sum_of_square_error(data_x,data_y,len_data,theta):
      sum_elem=np.sum(np.square(prod))
      error=sum_elem/(2*len_data) 
      return error 
+def run_linear_regression(data_x,data_y): 
+     iterations = 100000
+     alpha= 0.0001550
+     no_featuers=data_x.shape[1]
+     len_data=data_x.shape[0]-1
+     theta=np.zeros((1,no_features))
+
+     for i in range(0,iterations): 
+           theta=run_steep_gradient_decent(data_x,data_y,len_data, alpha, theta) 
+           error=sum_of_squares_error(data_x,data_y,len_data,theta) 
+
+     return theta 
+
+main(): 
+    data=collect_dataset()
+    len_data=data.shape[0]
+
+
+if __name__=="__main__":
+     main() 
+
 
