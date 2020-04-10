@@ -44,7 +44,15 @@ def run_linear_regression(data_x,data_y):
 main(): 
     data=collect_dataset()
     len_data=data.shape[0]
+    
+    data_x=np.c_[np.ones(len_data),data[:,:-1]].astype(float) 
+    data_y=data[:,-1].astype(float)
 
+    theta=run_linear_regression(data_x,data_y)
+    len_result=theta.shape[1]
+    print("resultant feature vector: ")
+    for i in range(0,len_result): 
+           print("%.5f" % (theta[0,i]))
 
 if __name__=="__main__":
      main() 
