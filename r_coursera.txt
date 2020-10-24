@@ -1,0 +1,37 @@
+x <- c(.5, .6)	  	#numeric
+x <- c(TRUE, FALSE) 	#logical 
+x <- c(T,F) 		#logical 
+x <- c("a", "b", "c") 	#character
+x <- 9:29		#integer
+x <- (1+0i, 2+4i) 	#complex
+ 
+
+#matrices 
+
+m <- matrix(nrow = 2, ncol = 3) 
+
+m <- matrix(1:6, nrow = 2, ncol = 3) 
+
+
+#differently create matrix 
+
+m <- 1:10 
+
+dim(m) <- c(2,5) 
+
+
+#create matrix using bind 
+
+x <- 1:3 
+y <- 10:12 
+
+cbind(x,y) 
+rbind(x,y) 
+
+
+
+##Creating a Dataframe
+
+x <- data.frame(foo = 1:4, bar = c(T,T,F,F)) 
+
+
